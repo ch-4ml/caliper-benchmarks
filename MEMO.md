@@ -97,3 +97,5 @@ CORE_VM_DOCKER_HOSTCONFIG_NETWORKMODE=2org1peercouchdbsoloraft_default
 ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/44cd66cc-a10f-4df3-97be-1dbe69b1368c/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/44cd66cc-a10f-4df3-97be-1dbe69b1368c/Untitled.png)
 
 ### 다른 기기에서 실행해보고 TPS 비교하기
+
+사양 정보
