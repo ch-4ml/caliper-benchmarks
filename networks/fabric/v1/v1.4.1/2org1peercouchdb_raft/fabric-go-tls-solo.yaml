@@ -86,6 +86,10 @@ channels:
       version: v0
       language: golang
       path: fabric/scenario/smallbank/go
+    - id: fabcar
+      version: v0
+      language: golang
+      path: fabric/samples/fabcar/go
 
 organizations:
   Org1:
