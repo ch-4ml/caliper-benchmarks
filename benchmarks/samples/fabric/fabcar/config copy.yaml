@@ -6,12 +6,9 @@ test:
     - label: Change car owner.
       txDuration: 30
       rateControl:
-          type: maximum-rate
+          type: fixed-load
           opts:
-            tps: 100
-            step: 5
-            sampleInterval: 20
-            includeFailed: false
+            transactionLoad: 5
       workload:
         module: benchmarks/samples/fabric/fabcar/changeCarOwner.js
         arguments:
@@ -19,12 +16,9 @@ test:
     - label: Query all cars.
       txDuration: 30
       rateControl:
-          type: maximum-rate
+          type: fixed-load
           opts:
-            tps: 100
-            step: 5
-            sampleInterval: 20
-            includeFailed: false
+            transactionLoad: 5
       workload:
         module: benchmarks/samples/fabric/fabcar/queryAllCars.js
         arguments:
@@ -34,12 +28,9 @@ test:
     - label: Query a car.
       txDuration: 30
       rateControl:
-          type: maximum-rate
+          type: fixed-load
           opts:
-            tps: 100
-            step: 5
-            sampleInterval: 20
-            includeFailed: false
+            transactionLoad: 5
       workload:
         module: benchmarks/samples/fabric/fabcar/queryCar.js
         arguments:
@@ -47,11 +38,8 @@ test:
     - label: Create a car.
       txDuration: 30
       rateControl:
-          type: maximum-rate
+          type: fixed-load
           opts:
-            tps: 100
-            step: 5
-            sampleInterval: 20
-            includeFailed: false
+            transactionLoad: 5
       workload:
         module: benchmarks/samples/fabric/fabcar/createCar.js
