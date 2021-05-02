@@ -18,12 +18,9 @@ test:
         contract.
       txNumber: *number-of-accounts
       rateControl:
-        type: maximum-rate
+        type: fixed-rate
         opts:
-          tps: 100
-          step: 5
-          sampleInterval: 20
-          includeFailed: false
+          tps: 50
       workload:
         module: benchmarks/scenario/simple/open.js
         arguments: *simple-args
@@ -31,12 +28,9 @@ test:
       description: Test description for the query performance of the deployed contract.
       txNumber: *number-of-accounts
       rateControl:
-        type: maximum-rate
+        type: fixed-rate
         opts:
           tps: 100
-          step: 5
-          sampleInterval: 20
-          includeFailed: false
       workload:
         module: benchmarks/scenario/simple/query.js
         arguments: *simple-args
@@ -44,12 +38,9 @@ test:
       description: Test description for transfering money between accounts.
       txNumber: 50
       rateControl:
-        type: maximum-rate
+        type: fixed-rate
         opts:
-          tps: 20
-          step: 5
-          sampleInterval: 20
-          includeFailed: false
+          tps: 5
       workload:
         module: benchmarks/scenario/simple/transfer.js
         arguments:
