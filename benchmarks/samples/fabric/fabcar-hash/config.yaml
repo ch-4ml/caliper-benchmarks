@@ -1,0 +1,122 @@
+test:
+  workers:
+    type: local
+    number: 5
+  rounds:
+
+
+    - label: Create a car
+      txDuration: 30
+      rateControl:
+          type: maximum-rate
+          opts:
+            tps: 50
+            step: 5
+            sampleInterval: 20
+            includeFailed: false
+      workload:
+        module: benchmarks/samples/fabric/fabcar/createCar.js
+
+    - label: Create a car(Hashed)
+      txDuration: 30
+      rateControl:
+          type: maximum-rate
+          opts:
+            tps: 50
+            step: 5
+            sampleInterval: 20
+            includeFailed: false
+      workload:
+        module: benchmarks/samples/fabric/fabcar-hash/createCar.js
+
+
+    - label: Change car owner
+      txDuration: 30
+      rateControl:
+          type: maximum-rate
+          opts:
+            tps: 50
+            step: 5
+            sampleInterval: 20
+            includeFailed: false
+      workload:
+        module: benchmarks/samples/fabric/fabcar/changeCarOwner.js
+        arguments:
+          assets: 1000
+
+    - label: Change car owner(Hashed)
+      txDuration: 30
+      rateControl:
+          type: maximum-rate
+          opts:
+            tps: 50
+            step: 5
+            sampleInterval: 20
+            includeFailed: false
+      workload:
+        module: benchmarks/samples/fabric/fabcar-hash/changeCarOwner.js
+        arguments:
+          assets: 1000
+
+
+    # - label: Query all cars
+    #   txDuration: 30
+    #   rateControl:
+    #       type: maximum-rate
+    #       opts:
+    #         tps: 50
+    #         step: 5
+    #         sampleInterval: 20
+    #         includeFailed: false
+    #   workload:
+    #     module: benchmarks/samples/fabric/fabcar/queryAllCars.js
+    #     arguments:
+    #       assets: 1000
+    #       startKey: '1'
+    #       endKey: '50'
+
+    # - label: Query all cars(Hashed)
+    #   txDuration: 30
+    #   rateControl:
+    #       type: maximum-rate
+    #       opts:
+    #         tps: 50
+    #         step: 5
+    #         sampleInterval: 20
+    #         includeFailed: false
+    #   workload:
+    #     module: benchmarks/samples/fabric/fabcar-hash/queryAllCars.js
+    #     arguments:
+    #       assets: 1000
+    #       startKey: '1'
+    #       endKey: '50'
+
+
+    # - label: Query a car
+    #   txDuration: 30
+    #   rateControl:
+    #       type: maximum-rate
+    #       opts:
+    #         tps: 50
+    #         step: 5
+    #         sampleInterval: 20
+    #         includeFailed: false
+    #   workload:
+    #     module: benchmarks/samples/fabric/fabcar/queryCar.js
+    #     arguments:
+    #       assets: 1000
+
+    # - label: Query a car(Hashed)
+    #   txDuration: 30
+    #   rateControl:
+    #       type: maximum-rate
+    #       opts:
+    #         tps: 50
+    #         step: 5
+    #         sampleInterval: 20
+    #         includeFailed: false
+    #   workload:
+    #     module: benchmarks/samples/fabric/fabcar-hash/queryCar.js
+    #     arguments:
+    #       assets: 1000
+
