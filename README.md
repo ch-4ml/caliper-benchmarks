@@ -1,3 +1,29 @@
+# Prerequisite
+
+## Network 설정 파일 generate
+
+**networks/fabric/*** 경로에서 사용하려는 네트워크 설정 디렉토리로 접근한 뒤 **[generate.sh](http://generate.sh)** 파일을 실행함으로써 네트워크 설정 파일을 생성한다.
+
+```bash
+~/caliper-benchmarks/networks/fabric/config_solo_raft$ ./generate.sh
+```
+
+## Local NPM을 이용한 설치 및 실행
+
+```bash
+$ npm init -y
+$ npm install --only=prod @hyperledger/caliper-cli@0.4.0
+$ npx caliper bind --caliper-bind-sut fabric:1.4
+$ npx caliper launch manager \
+	--caliper-workspace . \
+	--caliper-benchconfig benchmarks/scenario/simple/config.yaml \
+	--caliper-networkconfig networks/fabric/v1/v1.4.1/2org1peercouchdb_raft/fabric-go-tls-solo.yaml
+```
+
+정상적으로 수행되면 설정 파일에 따라 네트워크가 구성되고 테스트를 진행한다.
+
+이 경우 hyperledger fabric v1.4.1 버전, 2개의 Org, 각 1개 Peer, CouchDB를 사용하는 네트워크를 구성했다.
+
 # Launch
 
 ```
