@@ -13,6 +13,14 @@ $ npm install --only=prod @hyperledger/caliper-cli@0.4.0
 $ npx caliper bind --caliper-bind-sut fabric:1.4
 ```
 
+### Network 설정 파일 generate
+
+**networks/fabric/*** 경로에서 사용하려는 네트워크 설정 디렉토리로 접근한 뒤 **[generate.sh](http://generate.sh)** 파일을 실행함으로써 네트워크 설정 파일을 생성한다.
+
+```bash
+~/caliper-benchmarks/networks/fabric/config_solo_raft$ ./generate.sh
+```
+
 # Run with local npm
 
 ```
