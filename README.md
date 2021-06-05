@@ -1,3 +1,18 @@
+# Launch
+
+```
+~/caliper-benchmarks$ npx caliper launch manager \
+	--caliper-workspace . \
+	--caliper-benchconfig benchmarks/samples/fabric/fabcar-hash/config.yaml \
+	--caliper-networkconfig networks/fabric/v1/v1.4.1/2org1peercouchdb_raft/fabric-go-tls-solo.yaml
+```
+
+
+
+---
+
+# 원본
+
 # Hyperledger Caliper Benchmarks
 This repository contains sample benchmarks that may be used by Caliper, a blockchain performance benchmark framework. For more information on Caliper, please see the [Caliper main repository](https://github.com/hyperledger/caliper/)
 
