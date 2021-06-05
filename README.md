@@ -16,10 +16,6 @@ $ npm install --only=prod @hyperledger/caliper-cli@0.4.0
 $ npx caliper bind --caliper-bind-sut fabric:1.4
 ```
 
-정상적으로 수행되면 설정 파일에 따라 네트워크가 구성되고 테스트를 진행한다.
-
-이 경우 hyperledger fabric v1.4.1 버전, 2개의 Org, 각 1개 Peer, CouchDB를 사용하는 네트워크를 구성했다.
-
 # Run with local npm
 
 ```
@@ -29,7 +25,9 @@ $ npx caliper bind --caliper-bind-sut fabric:1.4
 	--caliper-networkconfig networks/fabric/v1/v1.4.1/2org1peercouchdb_raft/fabric-go-tls-solo.yaml
 ```
 
+정상적으로 수행되면 설정 파일에 따라 네트워크가 구성되고 테스트를 진행한다.
 
+이 경우 hyperledger fabric v1.4.1 버전, 2개의 Org, 각 1개 Peer, CouchDB를 사용하는 네트워크를 구성했다.
 
 ---
 
