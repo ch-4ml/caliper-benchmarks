@@ -11,8 +11,6 @@
 
 ---
 
-# 원본
-
 # Hyperledger Caliper Benchmarks
 This repository contains sample benchmarks that may be used by Caliper, a blockchain performance benchmark framework. For more information on Caliper, please see the [Caliper main repository](https://github.com/hyperledger/caliper/)
 
