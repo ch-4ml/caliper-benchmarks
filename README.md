@@ -2,8 +2,8 @@
 
 ## node.js 버전 8.x or 10.x로 맞추기
 
-lts/carbon (8.x)
-lts/dubnium (10.x)
+- lts/carbon (8.x)
+- lts/dubnium (10.x)
 
 ## Install & Configuration
 
